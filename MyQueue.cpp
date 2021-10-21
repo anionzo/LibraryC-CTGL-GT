@@ -51,7 +51,7 @@ QNode<T>* popQ(Queue<T>& Q)
 		Q.Head = Q.Head->Next;
 		p->Next = NULL;
 	}
-	return p;
+	return p; // delete p sau khi xuất p trong hàm cần sử dụng
 }
 template<class T>
 void pushQ(Queue<T>& Q, QNode<T>* p)
@@ -79,7 +79,7 @@ void insert(Queue<T>& Q, QNode<T>* p)
 		Q.Tail = p;
 	}
 }
-template<class T>
+template<class T> 
 void remove(Queue<T>& Q, T x)
 {
 	if (isEmpty(Q) == false)
